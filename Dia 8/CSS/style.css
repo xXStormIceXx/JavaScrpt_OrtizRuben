@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'titulo';
+    src: url();
+}
+
+body{
+    background-image: url();
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+
+.titulo{
+    font-family: 'titulo';
+    font-size: 150px;
+    margin-top: 5vi;
+    color: white;
+}
+
+.tabla{
+    border: 1px solid red;
+    
+}
