@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'titulo';
+    src:"/Dia 9/Storage/Starjout.ttf";
+}
+
+body{
+    background-image: url(https://s1.1zoom.me/big0/915/Star_Wars_The_Force_502760.jpg);
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+
+.titulo{
+    font-family: 'titulo';
+    font-size: 150px;
+    margin-top: 5vi;
+    color: #111111;
+}
+
+.tabla{
+    border: 1px solid red;
+    
+}
