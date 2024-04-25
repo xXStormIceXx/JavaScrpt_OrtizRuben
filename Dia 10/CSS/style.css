@@ -1,0 +1,34 @@
+@font-face {
+    font-family: 'titulo';
+    src: url(/Dia\ 10/storage/Starjhol.ttf);
+}
+
+@font-face {
+    font-family: 'th2';
+    src: url(/Dia\ 10/storage/Starjout.ttf);
+}
+
+body{
+    background-image: url(https://wallpapers.com/images/featured/star-wars-plzcoaffexgf4h81.jpg);
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    
+    
+}
+
+.titulo{
+    font-family:'titulo';
+    font-size: 150px;
+    margin-top: 5vi;
+    color: rgb(235, 157, 12);
+}
+
+.tabla{
+    border: 1px solid rgb(0, 0, 0);
+    
+}
+th{
+    font-family: 'th2';
+    font-size: 20px;
+}
