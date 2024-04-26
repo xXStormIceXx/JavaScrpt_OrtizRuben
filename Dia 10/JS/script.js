@@ -13,65 +13,49 @@ document.getElementById('apiForm').addEventListener('submit', function(e) {
                 <tr>
                     <th><strong>Height:</strong> </th>
                     <th>${data.height}</th>
-                </tr> 
-                <tr>
+                </tr> <tr>
                     <th><strong>mass:</strong></th>
                     <th>${data.mass}</th>
-                </tr>
-                <tr>
+                </tr><tr>
                     <th><strong>Hair color:</strong></th>
                     <th>${data.hair_color}</th>
-                </tr>
-                <tr>
+                </tr><tr>
                     <th><strong>skin color:</strong></th>
                     <th>${data.skin_color}</th>
-                </tr>
-                <tr>
+                </tr><tr>
                     <th><strong>eye color:</strong></th>
                     <th>${data.eye_color}</th>
-                </tr>
-                <tr>
+                </tr><tr>
                     <th><strong>Birthday:</strong> </th>
                     <th>${data.birth_year}</th>
-                </tr>
-                <tr>
+                </tr><tr>
                     <th><strong>Gender:</strong></th>
                     <th>${data.gender}</th>
-                </tr>
-                <tr>
+                </tr><tr>
                     <th><strong>Born world:</strong></th>
                     <th><p id="homeworldInfo"></p></th> 
-                </tr>
-                <tr>
+                </tr><tr>
                     <th><strong>Movies:</strong></th>
                     <th><p id="filmsList"></p></th>
-                </tr>
-                <tr>
+                </tr><tr>
                     <th><strong>Species:</strong></th>
                     <th><p id="speciesList"></p></th>
-                </tr>
-                <tr>
+                </tr><tr>
                     <th><strong>vehicles:</strong></th>
                     <th><p id="vehicleslist"></p></th>
-                </tr>
-                <tr>
-                <tr>
+                </tr><tr><tr>
                     <th><strong>Starships:</strong></th>
                     <th><p id="starshipsList"></p></th>
-                </tr>
-                <tr>
+                </tr><tr>
                     <th><strong>Created:</strong> </th>
                     <th>${data.created}</th>
-                </tr>
-                <tr>
+                </tr><tr>
                     <th><strong>last edited:</strong></th>
                     <th>${data.edited}</th>
-                </tr>
-                <tr>
+                </tr><tr>
                     <th><strong>URL:</strong> </th>
                     <th>${data.url}</th>
                 </tr>
-                
             `;
 
             document.getElementById('result').innerHTML = template;
@@ -83,7 +67,6 @@ document.getElementById('apiForm').addEventListener('submit', function(e) {
                         for (const key in info) {
                             if (info.hasOwnProperty(key)) {
                                 const value = info[key];
-                                // Verificar si el valor no es una lista
                                 if (!Array.isArray(value)) {
                                     const infoItem = document.createElement('li');
                                     infoItem.textContent = `${key}: ${value}`;

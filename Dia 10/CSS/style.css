@@ -1,11 +1,6 @@
 @font-face {
-    font-family: 'titulo';
-    src: url(/Dia\ 10/storage/Starjhol.ttf);
-}
-
-@font-face {
-    font-family: 'th2';
-    src: url(/Dia\ 10/storage/Starjout.ttf);
+    font-family: 'titulos';
+    src: url(/Dia\ 10/storage/Fontd/Starjhol.ttf);
 }
 
 body{
@@ -13,22 +8,28 @@ body{
     background-size: cover; 
     background-repeat: no-repeat; 
     background-attachment: fixed; 
-    
-    
 }
 
 .titulo{
-    font-family:'titulo';
+    font-family:'titulos';
     font-size: 150px;
     margin-top: 5vi;
-    color: rgb(235, 157, 12);
+    color: #ffae00;
 }
 
-.tabla{
-    border: 1px solid rgb(0, 0, 0);
-    
+.table {
+    width: 100%;
+    border-collapse: collapse black;
+    border: 1px solid #000000;
+    color: #ffae00 ;
 }
-th{
-    font-family: 'th2';
-    font-size: 20px;
+
+.table th, .table td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #000000;
+}
+
+.table th {
+    background-color: #0c0c0bb7;
 }
