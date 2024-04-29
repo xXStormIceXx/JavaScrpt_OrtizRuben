@@ -25,7 +25,7 @@ main {
   max-width: 425px;
 }
 
-.pokemon__image {
+.Imagen_Pokemon {
   position: absolute;
   bottom: 55%;
   left: 50%;
@@ -33,16 +33,16 @@ main {
   height: 18%;
 }
 
-.pokemon__data {
+.Info_Pokemon {
   position: absolute;
   font-weight: 600;
-  color: #aaa;
+  color: #FF204E;
   top: 54.5%;
   right: 27%;
   font-size: clamp(8px, 5vw, 25px);
 }
 
-.pokemon__name {
+.Nombre_Pokemon {
   color: #3a444d;
   text-transform: capitalize;
 }
@@ -54,16 +54,16 @@ main {
   left: 13.5%;
 }
 
-.input__search {
+.input__Buscar {
   width: 100%;
   padding: 4%;
   outline: none;
-  border: 2px solid #333;
+  border: 2px solid #00224D;
   border-radius: 5px;
   font-weight: 600;
-  color: #3a444d;
+  color: #A0153E;
   font-size: clamp(8px, 5vw, 1rem);
-  box-shadow: -3px 4px 0 #888, -5px 7px 0 #333
+  box-shadow: -3px 4px 0 #5D0E41, -5px 7px 0 #00224D
 }
 
 .buttons {
@@ -78,14 +78,14 @@ main {
 
 .button {
   width: 50%;
-  padding: 4%;
-  border: 2px solid #000;
+  padding: 5%;
+  border: 2px solid #00224D;
   border-radius: 5px;
   font-size: clamp(8px, 5vw, 1rem);
   font-weight: 600;
   color: white;
-  background-color: #444;
-  box-shadow: -2px 3px 0 #222, -4px 6px 0 #000;
+  background-color: #5D0E41;
+  box-shadow: -2px 3px 0 #A0153E, -4px 6px 0 #00224D;
 }
 
 .button:active {

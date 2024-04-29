@@ -1,11 +1,11 @@
-const pokemonName = document.querySelector('.pokemon__name');
-const pokemonNumber = document.querySelector('.pokemon__number');
-const pokemonImage = document.querySelector('.pokemon__image');
+const NombrePokemon = document.querySelector('.Nombre_Pokemon');
+const NumeroPokemon = document.querySelector('.Numero_Pokemon');
+const ImagenPokemon = document.querySelector('.Imagen_Pokemon');
 
 const form = document.querySelector('.form');
-const input = document.querySelector('.input__search');
-const buttonPrev = document.querySelector('.btn-prev');
-const buttonNext = document.querySelector('.btn-next');
+const input = document.querySelector('.input__Buscar');
+const BotonAnterior = document.querySelector('.btn-Siguiente');
+const BotonSiguiente = document.querySelector('.btn-Anterior');
 
 let searchPokemon = 1;
 
@@ -20,22 +20,22 @@ const fetchPokemon = async (pokemon) => {
 
 const renderPokemon = async (pokemon) => {
 
-  pokemonName.innerHTML = 'Loading...';
-  pokemonNumber.innerHTML = '';
+  NombrePokemon.innerHTML = 'Cargando...';
+  NumeroPokemon.innerHTML = '';
 
   const data = await fetchPokemon(pokemon);
 
   if (data) {
-    pokemonImage.style.display = 'block';
-    pokemonName.innerHTML = data.name;
-    pokemonNumber.innerHTML = data.id;
-    pokemonImage.src = data['sprites']['versions']['generation-v']['black-white']['animated']['front_default'];
+    ImagenPokemon.style.display = 'block';
+    NombrePokemon.innerHTML = data.name;
+    NumeroPokemon.innerHTML = data.id;
+    ImagenPokemon.src = data['sprites']['versions']['generation-v']['black-white']['animated']['front_default'];
     input.value = '';
     searchPokemon = data.id;
   } else {
-    pokemonImage.style.display = 'none';
-    pokemonName.innerHTML = 'Not found :c';
-    pokemonNumber.innerHTML = '';
+    ImagenPokemon.style.display = 'none';
+    NombrePokemon.innerHTML = 'No Encontrado :c';
+    NumeroPokemon.innerHTML = '';
   }
 }
 
@@ -44,14 +44,20 @@ form.addEventListener('submit', (event) => {
   renderPokemon(input.value.toLowerCase());
 });
 
-buttonPrev.addEventListener('click', () => {
+function playSonido_Pokemon(audioUrl) {
+  let audio = document.getElementById("Sonido_pokemon");
+  audio.src = audioUrl;
+  audio.play();
+}
+
+BotonAnterior.addEventListener('click', () => {
   if (searchPokemon > 1) {
     searchPokemon -= 1;
     renderPokemon(searchPokemon);
   }
 });
 
-buttonNext.addEventListener('click', () => {
+BotonSiguiente.addEventListener('click', () => {
   searchPokemon += 1;
   renderPokemon(searchPokemon);
 });
