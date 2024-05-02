@@ -1,0 +1,39 @@
+[x-cloak] { display: none !important; }
+body {
+  background: url("https://cdn.photoroom.com/v1/assets-cached.jpg?path=backgrounds_v3/black/Photoroom_black_background_extremely_fine_texture_only_black_co_bf23f47c-d415-44b6-a622-fc230664d498.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+.cardArea {
+  width: 100%;
+  text-align: center;
+}
+
+.cardArea h3 {
+  color: rgba(37, 34, 34, 0.74);
+  font-weight: bold;
+  font-size: 1.5em;
+}
+.cardArea img {
+  max-width:18%;
+  margin: 5px;
+}
+
+#status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  width: 60%;
+  height: 100px;
+  margin-top: 20px;
+  margin-left: auto; 
+  margin-right: auto;
+  background-color: rgba(26, 24, 24, 0.473);
+  font-size: 1.5em;
+}
+
+#status p {
+  margin-top: auto; 
+  margin-bottom: auto;
+}

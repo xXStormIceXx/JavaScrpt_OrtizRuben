@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black Jack</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+<body>
+    <div x-data="app" x-cloak>
+        <div id="pcArea" class="cardArea">
+          <h3>Dealer</h3>
+          <template x-for="card in pcCards">
+            <img :src="card.showback?BACK_CARD:card.image" :title="card.showback?'':card.title">
+          </template>
+        </div>
+        <div id="playerArea" class="cardArea">
+          <h3>Jugador</h3>
+          <template x-for="card in playerCards">
+            <img :src="card.image" :title="card.title">
+          </template>
+        </div>
+        <div id="status">
+          <template x-if="playerTurn">
+            <p>
+                ¿Qué Quieres hacer?
+              <button @click="hitMe" :disabled="hitMeDisabled">Reparte!</button>
+              <button @click="stay">Plantar</button>
+            </p>
+          </template>
+          <template x-if="pcTurn">
+            <p>
+              <span x-text="pcText"></span>
+            </p>
+          </template>
+          <template x-if="playerBusted">
+            <p>
+                ¡Perdiste!
+              <button @click="newGame">Nuevo Juego</button>
+            </p>
+          </template>
+          <template x-if="pcBusted">
+            <p>
+                Dealer Pierde - Tu ¡Ganas!
+              <button @click="newGame">Nuevo Juego</button>
+            </p>
+          </template>
+          <template x-if="pcWon">
+            <p>
+                El Dealer Gana.
+              <button @click="newGame">Nuevo Juego</button>
+            </p>
+          </template>
+          <template x-if="playerWon">
+            <p>
+              ¡Ganaste!
+              <button @click="newGame">Nuevo Juego</button>
+            </p>
+          </template>
+        </div>
+      </div>
+</body>
+<script src="https://unpkg.com/alpinejs@3.1.x/dist/cdn.min.js" defer></script>
+<script src="./JS/script.js"></script>
+</html>
+
+
