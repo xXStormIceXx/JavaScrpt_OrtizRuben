@@ -2,6 +2,7 @@
 body {
   background: url("https://cdn.photoroom.com/v1/assets-cached.jpg?path=backgrounds_v3/black/Photoroom_black_background_extremely_fine_texture_only_black_co_bf23f47c-d415-44b6-a622-fc230664d498.jpg") no-repeat center center fixed;
   background-size: cover;
+  color: aliceblue;
 }
 
 .cardArea {
