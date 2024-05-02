@@ -30,11 +30,22 @@ body {
   margin-top: 20px;
   margin-left: auto; 
   margin-right: auto;
-  background-color: rgba(26, 24, 24, 0.473);
+  background-color: rgba(26, 24, 24, 0.644);
   font-size: 1.5em;
 }
 
 #status p {
   margin-top: auto; 
   margin-bottom: auto;
+}
+
+button{
+  background-color: white; 
+  border: 2px solid #444242;
+  width: 10em;
+  height: 2em; 
+} 
+button:hover {
+  background: #474444; 
+  color: white;
 }
