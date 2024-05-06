@@ -1,56 +1,61 @@
-console.log("Hola mundo");
-let juan = "juan Felipe"; 
-let saludo = "Hola como estas?" + " " +juan;
-console.log(saludo);
+document.addEventListener("DOMContentLoaded", function() {
+    document.querySelector('.btn-info').addEventListener('click', function() {
+        // Código para el botón "Nuevo Heroe"
+    });
 
+    document.querySelector('.btn-primary').addEventListener('click', function() {
+        // Código para el botón "Actualizar Heroe"
+    });
 
-// ** FUNCION SIN RETORNO Y SIN PARAMETROS **
-function funcionNormal(){
-    console.log("Mi función");
-}
+    document.querySelector('.btn-success').addEventListener('click', function() {
+        // Código para el botón "Guardar Heroe"
+        const formData = new FormData(document.getElementById('frmDataHero'));
+        const jsonData = {};
+        formData.forEach((value, key) => {
+            jsonData[key] = value;
+        });
+        const jsonStr = JSON.stringify(jsonData);
+        console.log(jsonStr);
+        // Aquí puedes enviar jsonStr al servidor o hacer lo que necesites con los datos
+    });
 
-// ** FUNCION SIN RETORNO Y CON PARAMETROS **
-function suma(a,b){
-    console.log(a+b);
-}
-// ** FUNCION CON RETORNO Y CON PARAMETROS **
-function sumaR(a,b){
-    //console.log(a+b);
-    return a+b;
-}
-// ** FUNCION CON RETORNO Y SIN PARAMETROS **
-function salonFavorito(){
-    //console.log(a+b);
-    return "P1";
-}
-funcionNormal();
-suma();
-sumaR();
-salonFavorito();
+    document.querySelector('.btn-danger').addEventListener('click', function() {
+        // Código para el botón "Eliminar Heroe"
+    });
 
+    document.querySelector('.btn-dark').addEventListener('click', function() {
+        // Código para el botón "Cancelar"
+    });
 
+    document.querySelector('#addSuite').addEventListener('click', function() {
+        // Código para añadir registros de trajes
+    });
+});
+document.addEventListener("DOMContentLoaded", function() {
+    document.querySelector(".btn-success").addEventListener("click", function() {
+        // Obtener los valores de los campos del formulario
+        var characterName = document.getElementById("characterName").value;
+        var actorName = document.getElementById("actorName").value;
+        var age = document.getElementById("age").value;
+        var cityName = document.getElementById("cityName").value;
+        var poster = document.getElementById("poster").value;
+        var dateAppears = document.getElementById("dateAppears").value;
+        var producer = document.getElementById("producer").value;
 
+        // Crear un objeto con la información recolectada
+        var heroeData = {
+            characterName: characterName,
+            actorName: actorName,
+            age: age,
+            cityName: cityName,
+            poster: poster,
+            dateAppears: dateAppears,
+            producer: producer
+        };
 
-// ************************** BUCLE FOR *************************
+        // Mostrar la información recolectada en la consola (puedes cambiar esto según tus necesidades)
+        console.log("Información del héroe:", heroeData);
 
-arreglo=[123,"Rubio",true]
-console.log(arreglo.length);
-
-tamano = arreglo.length;
-
-for (let i =0; i<tamano;i++){
-    console.log(arreglo[i])
-}
-
-// ************* Eejrcicio #1 ********** 
-// Se necesita ingresar un nuemor en grados Celsius para pasarlos a fahrenheit
-
-let numero = prompt("Ingrese los grados Celsius para pasarlos a Fahrenheit");
-
-function formula(celsius) {
-    let fahrenheit = (celsius * 9/5) + 32;
-    return fahrenheit;
-}
-
-let resultado = formula(numero);
-alert("El resultado en Fahrenheit es: " + resultado);
+        // Aquí puedes agregar código para enviar la información recolectada a tu servidor, almacenarla en una base de datos, etc.
+    });
+});
